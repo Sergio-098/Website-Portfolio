@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<div id="header">
+    <img src="images/yeyo.jpg" class="headshot">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>University of Toronto Computer Science and Statistics Student</p>
+            <h1>Hello, I'm <span>Sergio Sanchez</span>.<br>Welcome to my Online Portfolio</h1>
+        </div>
+    </div>
+</div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <h1 class="subtitle">About Me</h1>
+                <p class="aboutme">I am passionate about storytelling and have fulfilled this passion through data analysis and presentation. Over the years, I have cultivated my data analysis skills to become the best storyteller I could be. I am currently pursuing a BSc in a joint computer science and statistics major at the University of Toronto, I have honed my software skills through rigorous coursework and hands-on self-projects that have helped me become proficient in Python, Java, SQL, and R.</p>
+                <div class="tab-title">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('complang')">Computer Languages</p>
+                    <p class="tab-links" onclick="opentab('software')">Software</p>
+                    <p class="tab-links" onclick="opentab('spoklang')">Spoken Languages</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Data Analytics:</span><br>Analyzing large data sets using computer science skills to leverage information informing business decisions.</li>
+                        <li><span>Statistical Programming:</span><br>Using machine learning and statistics techniques to drive business insights.</li>
+                        <li><span>Computer Programming:</span><br>Designing and Testing computer algorithms maximizing efficiency.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="complang">
+                    <ul>
+                        <li><span>Python:</span><br>2 years experience.</li>
+                        <li><span>Java:</span><br>3 years experience.</li>
+                        <li><span>SQL:</span><br>2 years experience.</li>
+                        <li><span>HTML:</span><br>1 year experience.</li>
+                        <li><span>CSS:</span><br>1 year experience.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="software">
+                    <ul>
+                        <li><span>PyCharm:</span><br>2 years experience.</li>
+                        <li><span>IntelliJ:</span><br>3 years experience.</li>
+                        <li><span>Pandas:</span><br>2 years experience.</li>
+                        <li><span>SQLite:</span><br>2 years experience.</li>
+                        <li><span>PowerBI:</span><br>1 year experience.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="spoklang">
+                    <ul>
+                        <li><span>English:</span><br>Fluent.</li>
+                        <li><span>French:</span><br>Fluent.</li>
+                        <li><span>Spanish:</span><br>Fluent.</li>
+                        <li><span>Italian:</span><br>Intermediate.</li>
+                        <li><span>Portuguese:</span><br>Novice.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="about-col-2">
+                <img src="images/uoft.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="portfolio">
+    <div class="conainer">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/stocks.jpg">
+                <div class="layer">
+                    <h3>S&P 500 ETF Price Predictor</h3>
+                    <p>Machine Learning project using Python, Pandas, and SKLearn that predicts increases or decreases in S&P 500 price with 98% accuracy</p>
+                    <a href="https://github.com/Sergio-098/s-pPredictor" assistant class="button">Check Out On GitHub</a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/footy.jpg">
+                <div class="layer">
+                    <h3>Fantasy Premier League Algorithmic Draft Assistant</h3>
+                    <p>Data Science research project that finds the highest indicators of a high point fantasy premier league season for players, sorts them into a queue based on their found value, then connects to fantasy premier league website to complete my draft for me based on my findings. Project uses SKlearn, Selenium, and Python</p>
+                    <a href="https://github.com/Sergio-098/FPL" assistant class="button">Check Out On GitHub</a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/web.png">
+                <div class="layer">
+                    <h3>Website Portfolio from Scratch</h3>
+                    <p>Website portfolio and resume created from scratch using html and css as well as the software design process</p>
+                    <a href="https://github.com/Sergio-098/Website-Portfolio" assistant class="button">Check Out On GitHub</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contacts-left">
+                <h1 class="subtitle">Contact Me</h1>
+                <a href="mailto:sergio.sanchez.0519@gmail.com" class="text-link">
+                    Email Me - sergio.sanchez.0519@gmail.com
+                    <img src="images/email.png" alt="Email Icon">
+                </a>
+                <br>
+                <a href="https://www.linkedin.com/in/sergio-sanchez-6031902a1" target="_blank" class="text-link">
+                    Visit My LinkedIn Profile
+                    <img src="images/linkedin.png" alt="LinkedIn Icon">
+                </a>
+            </div>
+            <div class="contacts-right">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
+
